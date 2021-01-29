@@ -1,7 +1,8 @@
 {
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.7",
   "npmClient": "npm"
 }
