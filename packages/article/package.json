@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "christineqiu",
   "license": "ISC",
   "dependencies": {
     "core": "../core"
@@ -14,5 +14,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "bca7f44de5a56eb27d6a1109c6d82a123cdce693"
+  "gitHead": "be40e2d0c5b95e1eda42b597a458d83c4e433405"
 }
