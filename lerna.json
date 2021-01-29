@@ -1,8 +1,5 @@
 {
-  "private": true,
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "version": "0.0.11",
   "npmClient": "npm"
 }
