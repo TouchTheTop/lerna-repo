@@ -1,5 +1,5 @@
 {
-  "name": "@qytbase/article",
+  "name": "qytbase-article",
   "version": "0.0.18",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,13 @@
   "dependencies": {
     "core": "../core"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TouchTheTop/lerna-repo.git",
+    "directory": "packages/article"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "483174c7154d0913598c3057cdf2af712b52a34d"
+  "gitHead": "373ef976f88c4760aa8a0371a166f61e45887ee1"
 }
