@@ -1,5 +1,5 @@
 {
-  "name": "@qyt/poster",
+  "name": "@qytbase/poster",
   "version": "0.0.12",
   "description": "",
   "main": "index.js",
@@ -11,5 +11,5 @@
   },
   "author": "",
   "license": "ISC",
-  "gitHead": "f7e79ae440e257a9108f72a795f3dce12745c11d"
+  "gitHead": "cdd7f393430f8707fafe342774d4f4509aeb1e68"
 }
