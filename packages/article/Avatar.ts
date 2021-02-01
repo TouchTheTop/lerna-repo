@@ -1,4 +1,4 @@
-import Avatar from "./Avatar";
-import { withInstall } from "../../util/install";
+import Avatar from "./src/Avatar";
+import { withInstall } from "./util/install";
 
 export default withInstall(Avatar);
