@@ -2,7 +2,7 @@
   "name": "qytbase-article",
   "version": "0.0.26",
   "description": "",
-  "main": "index.js",
+  "main": "/dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
