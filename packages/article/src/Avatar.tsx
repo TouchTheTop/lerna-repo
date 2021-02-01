@@ -7,7 +7,7 @@ export default defineComponent({
     },
     render(){
         return (
-            <span>avatar</span>
+            <span>avatar1</span>
         )
     }
 
