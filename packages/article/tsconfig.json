@@ -1,9 +1,6 @@
 {
     "compilerOptions": {
       "baseUrl": "./",
-      "paths": {
-        "qytbase": ["./index.tsx"],
-      },
       "strictNullChecks": false,
       "strict": true,
       "moduleResolution": "node",

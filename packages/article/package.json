@@ -2,7 +2,10 @@
   "name": "qytbase-article",
   "version": "0.0.28",
   "description": "",
-  "main": "/dist/app.js",
+  "main": "dist/app.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -11,9 +14,15 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-export-default-from": "^7.12.1",
+    "@babel/plugin-proposal-export-namespace-from": "^7.12.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-typescript": "^7.12.7",
     "@vue/babel-plugin-jsx": "^1.0.2",
+    "@vue/babel-preset-jsx": "^1.2.4",
+    "@vue/cli-plugin-babel": "^4.5.11",
     "babel-loader": "^8.2.2",
     "babel-plugin-import": "^1.13.3",
     "css-loader": "^5.0.1",
