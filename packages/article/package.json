@@ -9,7 +9,8 @@
   "author": "christine316",
   "license": "ISC",
   "dependencies": {
-    "core": "../core"
+    "core": "../core",
+    "vue": "^3.0.5"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "2d50537d519f631f368c17c2ff32cd32227751a4"
+  "gitHead": "232aba49c17f3000d24bf7174321fe0a809aa82c"
 }

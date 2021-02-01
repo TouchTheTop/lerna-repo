@@ -11,5 +11,8 @@
   },
   "author": "christine316",
   "license": "ISC",
-  "gitHead": "2d50537d519f631f368c17c2ff32cd32227751a4"
+  "gitHead": "232aba49c17f3000d24bf7174321fe0a809aa82c",
+  "dependencies": {
+    "vue": "^3.0.5"
+  }
 }
