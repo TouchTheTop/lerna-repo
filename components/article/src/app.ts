@@ -1,4 +1,4 @@
-import Avatar from './Avatar';
+import Index from './Index';
 
 // const components = [
 //   Avatar
@@ -11,4 +11,4 @@ import Avatar from './Avatar';
 //     return app;
 //   };
 
-  export default Avatar
+  export default Index

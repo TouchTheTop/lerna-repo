@@ -49,7 +49,7 @@ function init() {
 
 // 获取需要整合的业务资源地址
 function getSources() {
-  return needSourceList.map(function (v) {
+  return needSourceList.map(function(v) {
     const s = packageSource[v];
     if (!s) {
       console.log(chalk.red(`Error: this source of ${v} is not exit`));
@@ -63,7 +63,7 @@ function getSources() {
 function pullPackages() {
   const sources = getSources();
   let tip = "引入";
-  sources.forEach(function (source) {
+  sources.forEach(function(source) {
     const path = "HTML5";
     const source_path = `${SUB_PATH}/${path}`;
     let command = ``;

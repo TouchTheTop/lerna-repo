@@ -1,7 +1,10 @@
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const path = require("path");
+const webpackFileInject = require("./webpackFileInject");
 const babelConfig = {
   cacheDirectory: true,
   presets: [
+    "@vue/cli-plugin-babel/preset",
     [
       "@babel/preset-env",
       {
@@ -17,38 +20,22 @@ const babelConfig = {
         },
       },
     ],
-    "@vue/cli-plugin-babel",
-    [
-      "@vue/babel-preset-jsx",
-      {
-        injectH: false,
-      },
-    ],
     "@babel/preset-typescript",
   ],
-  plugins: [
-    [
-      "babel-plugin-import",
-      {
-        libraryName: "article",
-        libraryDirectory: "", // default: lib
-        style: true,
-      },
-    ],
-    ["@vue/babel-plugin-jsx", { mergeProps: false }],
-    "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-export-namespace-from",
-  ],
+  plugins: ["@vue/babel-plugin-jsx"],
 };
 
+const pathsWebpack = webpackFileInject(path.resolve(__dirname, "./components"));
+
 module.exports = {
-  mode: "development",
-  entry: {
-    app: "./src/app.ts",
-  },
+  mode: "production",
+  entry: pathsWebpack.entrys,
   output: {
-    library: "Article",
-    libraryTarget: "amd",
+    path: path.resolve(__dirname, "./packages/"),
+    filename: "[name]/app.js",
+    library: "Article111",
+    libraryTarget: "umd",
+    libraryExport: "default",
   },
   module: {
     rules: [
@@ -79,6 +66,9 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      "lerna-repo/util": path.join(__dirname, "./util"),
+    },
     extensions: [".js", ".jsx", ".ts", ".tsx", ".vue", ".md"],
   },
   plugins: [new VueLoaderPlugin()],

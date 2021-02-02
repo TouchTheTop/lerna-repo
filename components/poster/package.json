@@ -1,18 +1,13 @@
 {
   "name": "qytbase-poster",
-  "version": "0.0.21",
+  "version": "0.0.28",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "author": "christine316",
   "license": "ISC",
   "gitHead": "232aba49c17f3000d24bf7174321fe0a809aa82c",
-  "dependencies": {
-    "vue": "^3.0.5"
-  }
+  "dependencies": {}
 }

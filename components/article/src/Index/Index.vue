@@ -1,19 +1,12 @@
 <template>
-  <div>test</div>
+  <div>我是文章模块</div>
 </template>
 <script>
 export default {
-  name: "Avatar",
+  name: "QAvatar",
   props: {},
   data() {
     return {};
-  },
-  render() {
-    return (
-      <div>
-        <input />
-      </div>
-    );
   },
 };
 </script>
