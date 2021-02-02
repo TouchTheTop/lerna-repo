@@ -1,6 +1,6 @@
 {
   "name": "qytbase-poster",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -8,6 +8,5 @@
   },
   "author": "christine316",
   "license": "ISC",
-  "gitHead": "232aba49c17f3000d24bf7174321fe0a809aa82c",
-  "dependencies": {}
+  "gitHead": "232aba49c17f3000d24bf7174321fe0a809aa82c"
 }

@@ -1,14 +1,22 @@
 {
-  "packages": ["components/*"],
+  "packages": [
+    "components/*"
+  ],
   "command": {
     "publish": {
-      "ignoreChanges": ["ignored-file", "*.md", "src"]
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md",
+        "src"
+      ]
     },
     "bootstrap": {
       "ignore": "src-*",
-      "npmClientArgs": ["--no-package-lock"]
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
     }
   },
-  "version": "0.0.28",
+  "version": "0.0.29",
   "npmClient": "npm"
 }
