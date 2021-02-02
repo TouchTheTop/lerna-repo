@@ -1,14 +1,23 @@
 {
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "command": {
     "publish": {
-      "ignoreChanges": ["ignored-file", "*.md", "src/*", "packages/core/*"]
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md",
+        "src/*",
+        "packages/core/*"
+      ]
     },
     "bootstrap": {
       "ignore": "src-*",
-      "npmClientArgs": ["--no-package-lock"]
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
     }
   },
-  "version": "0.0.30",
+  "version": "0.0.31",
   "npmClient": "npm"
 }
