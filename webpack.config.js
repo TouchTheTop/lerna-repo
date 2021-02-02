@@ -25,14 +25,14 @@ const babelConfig = {
   plugins: ["@vue/babel-plugin-jsx"],
 };
 
-const pathsWebpack = webpackFileInject(path.resolve(__dirname, "./components"));
+const pathsWebpack = webpackFileInject(path.resolve(__dirname, "./packages"));
 
 module.exports = {
   mode: "production",
   entry: pathsWebpack.entrys,
   output: {
     path: path.resolve(__dirname, "./packages/"),
-    filename: "[name]/app.js",
+    filename: "[name]/dist/app.js",
     library: "Article111",
     libraryTarget: "umd",
     libraryExport: "default",

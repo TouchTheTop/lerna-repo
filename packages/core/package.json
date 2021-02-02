@@ -1,8 +1,8 @@
 {
   "name": "qytbase-core",
-  "version": "0.0.30",
+  "version": "0.0.29",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

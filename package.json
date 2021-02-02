@@ -10,8 +10,11 @@
   "author": "christine316",
   "license": "ISC",
   "devDependencies": {
+    "babel-loader": "^8.2.2",
     "eslint": "^7.19.0",
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "ts-loader": "^8.0.14",
+    "vue-loader": "^15.9.6"
   },
   "dependencies": {
     "@babel/preset-env": "^7.12.11",

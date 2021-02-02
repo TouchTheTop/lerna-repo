@@ -1,8 +1,8 @@
 {
   "name": "qytbase-article",
-  "version": "0.0.30",
+  "version": "0.0.29",
   "description": "",
-  "main": "app.js",
+  "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -17,5 +17,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "232aba49c17f3000d24bf7174321fe0a809aa82c"
+  "gitHead": "232aba49c17f3000d24bf7174321fe0a809aa82c",
+  "dependencies": {
+    "core": "../core"
+  }
 }
