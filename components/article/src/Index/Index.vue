@@ -1,5 +1,5 @@
 <template>
-  <div>我是文章模块</div>
+  <div>-----我是文章模块-----</div>
 </template>
 <script>
 export default {
