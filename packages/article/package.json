@@ -1,6 +1,6 @@
 {
   "name": "qytbase-article",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -9,7 +9,6 @@
   },
   "author": "christine316",
   "license": "ISC",
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/TouchTheTop/lerna-repo.git",
