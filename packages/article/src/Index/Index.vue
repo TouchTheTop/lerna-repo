@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>-----【文章】-----</h1>
+    <h1>-----【文章】 -----</h1>
     <loading></loading>
     <button @click="toDetail">点击跳转详情</button>
   </div>
