@@ -18,7 +18,9 @@ export default {
   data() {
     return {};
   },
-  mounted() {},
+  mounted() {
+    Api.post();
+  },
   methods: {
     toDetail() {
       this.$router.push("/article/detail");
