@@ -1,6 +1,6 @@
 {
   "name": "qytbase-article",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "description": "",
   "main": "dist/app.js",
   "scripts": {

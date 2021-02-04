@@ -1,11 +1,8 @@
-0 silly argv {
-0 silly argv   _: [ 'add' ],
-0 silly argv   globs: [],
-0 silly argv   lernaVersion: '3.22.1',
-0 silly argv   '$0': 'lerna',
-0 silly argv   pkg: '@vue/babel-preset-cli-plugin-babel'
-0 silly argv }
-1 notice cli v3.22.1
-2 verbose rootPath /Users/christine/Documents/study/lerna-repo
-3 error Error: 404 Not Found - GET https://registry.npmjs.org/@vue%2fbabel-preset-cli-plugin-babel - Not found
-3 error     at /Users/christine/.nvm/versions/node/v12.19.1/lib/node_modules/lerna/node_modules/_@evocateur_npm-registry-fetch@4.0.0@@evocateur/npm-registry-fetch/check-response.js:104:15
+53 error Error: Command failed: git commit -m v0.0.37
+53 error error: insufficient permission for adding an object to repository database .git/objects
+53 error error: insufficient permission for adding an object to repository database .git/objects
+53 error error: Error building trees
+53 error
+53 error     at makeError (/Users/christine/.nvm/versions/node/v12.19.1/lib/node_modules/lerna/node_modules/_execa@1.0.0@execa/index.js:174:9)
+53 error     at /Users/christine/.nvm/versions/node/v12.19.1/lib/node_modules/lerna/node_modules/_execa@1.0.0@execa/index.js:278:16
+53 error     at processTicksAndRejections (internal/process/task_queues.js:97:5)
