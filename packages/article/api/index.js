@@ -1,6 +1,6 @@
 import { GenRequest } from "core/util";
 import Vue from "vue";
-console.log("xxxx", Vue.prototype.$loginInfo);
+console.log("xxx1x", Vue.prototype.$loginInfo);
 const r = new GenRequest({
   header: {
     token: this.$loginInfo,
