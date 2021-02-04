@@ -1,8 +1,41 @@
-53 error Error: Command failed: git commit -m v0.0.37
-53 error error: insufficient permission for adding an object to repository database .git/objects
-53 error error: insufficient permission for adding an object to repository database .git/objects
-53 error error: Error building trees
-53 error
-53 error     at makeError (/Users/christine/.nvm/versions/node/v12.19.1/lib/node_modules/lerna/node_modules/_execa@1.0.0@execa/index.js:174:9)
-53 error     at /Users/christine/.nvm/versions/node/v12.19.1/lib/node_modules/lerna/node_modules/_execa@1.0.0@execa/index.js:278:16
-53 error     at processTicksAndRejections (internal/process/task_queues.js:97:5)
+0 silly argv { _: [ 'bootstrap' ], lernaVersion: '3.22.1', '$0': 'lerna' }
+1 notice cli v3.22.1
+2 verbose rootPath /Users/christine/Documents/study/lerna-repo
+3 notice filter excluding "src-*"
+4 info filter [ '!src-*' ]
+5 silly npmConfig {
+5 silly npmConfig   registry: undefined,
+5 silly npmConfig   npmClient: 'npm',
+5 silly npmConfig   npmClientArgs: [ '--no-package-lock' ],
+5 silly npmConfig   mutex: undefined
+5 silly npmConfig }
+6 info Bootstrapping 4 packages
+7 verbose lifecycle preinstall
+8 silly lifecycle No script for "preinstall" in "qytbase-cli", continuing
+9 silly lifecycle No script for "preinstall" in "qytbase-core", continuing
+10 silly lifecycle No script for "preinstall" in "qytbase-poster", continuing
+11 silly lifecycle No script for "preinstall" in "qytbase-article", continuing
+12 silly hasDependencyInstalled qytbase-article vue-router
+13 silly hasDependencyInstalled qytbase-cli chalk
+14 silly hasDependencyInstalled qytbase-cli commander
+15 silly hasDependencyInstalled qytbase-cli inquirer
+16 silly hasDependencyInstalled qytbase-cli shelljs
+17 silly root dependencies {}
+18 silly leaf dependencies {}
+19 info Symlinking packages and binaries
+20 silly resolveSymlink /Users/christine/Documents/study/lerna-repo/packages/article/node_modules/qytbase-core
+21 verbose resolveSymlink [
+21 verbose resolveSymlink   '/Users/christine/Documents/study/lerna-repo/packages/article/node_modules/qytbase-core',
+21 verbose resolveSymlink   '/Users/christine/Documents/study/lerna-repo/packages/core'
+21 verbose resolveSymlink ]
+22 silly createSymlink [
+22 silly createSymlink   '/Users/christine/Documents/study/lerna-repo/packages/core',
+22 silly createSymlink   '/Users/christine/Documents/study/lerna-repo/packages/article/node_modules/qytbase-core',
+22 silly createSymlink   'junction'
+22 silly createSymlink ]
+23 silly createSymbolicLink [
+23 silly createSymbolicLink   '../../core',
+23 silly createSymbolicLink   '/Users/christine/Documents/study/lerna-repo/packages/article/node_modules/qytbase-core',
+23 silly createSymbolicLink   'junction'
+23 silly createSymbolicLink ]
+24 error
