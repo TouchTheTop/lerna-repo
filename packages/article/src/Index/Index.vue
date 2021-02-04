@@ -7,7 +7,7 @@
 </template>
 <script>
 // 引入公共库中的组件
-import { Loading } from "core";
+import { Loading } from "qytbase-core";
 import Api from "../../api";
 export default {
   name: "QAvatar",

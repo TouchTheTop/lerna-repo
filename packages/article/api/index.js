@@ -1,4 +1,4 @@
-import { GenRequest } from "core/util";
+import { GenRequest } from "qytbase-core";
 import Vue from "vue";
 console.log("xxx1x", Vue.prototype.$loginInfo);
 const r = new GenRequest({
