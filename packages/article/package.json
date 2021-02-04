@@ -1,6 +1,6 @@
 {
   "name": "qytbase-article",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "description": "",
   "main": "dist/app.js",
   "scripts": {
@@ -19,7 +19,7 @@
   },
   "gitHead": "1525335cd736e6503bb248b6695f035b7c55db64",
   "dependencies": {
-    "qytbase-core": "^0.0.42",
+    "qytbase-core": "^0.0.43",
     "vue-router": "^3.5.1"
   }
 }
