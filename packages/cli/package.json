@@ -2,7 +2,7 @@
   "name": "qytbase-cli",
   "version": "0.0.31",
   "description": "",
-  "main": "app.js",
+  "main": "routerModule.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/TouchTheTop/lerna-repo.git",
@@ -18,7 +18,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node routerModule.js"
   },
   "author": "christine316",
   "license": "ISC",

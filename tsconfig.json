@@ -3,6 +3,7 @@
       "paths": {
         "lerna-repo/util/*":["util/*"]
       },
+      "noImplicitThis":true,
       "baseUrl": "./",
       "strictNullChecks": false,
       "strict": true,
@@ -18,5 +19,5 @@
       "skipLibCheck": true,
       "allowJs": true
     },
-    "exclude": ["node_modules", "lib", "es", "dist"]
+    "exclude": ["node_modules", "lib", "es", "dist","js","util"]
   }

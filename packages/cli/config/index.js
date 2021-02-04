@@ -1,3 +1,3 @@
 module.exports = {
-  海报: "https://github.com/TouchTheTop/HTML5.git",
+  文章: "qytbase-article",
 };

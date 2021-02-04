@@ -5,7 +5,7 @@ const Commander = require("commander");
 const Shell = require("shelljs");
 const chalk = require("chalk");
 
-const packageSource = require("../config");
+const packageSource = require("./config");
 
 const sourcePrompt = [
   {
@@ -63,27 +63,33 @@ function getSources() {
 function pullPackages() {
   const sources = getSources();
   let tip = "引入";
-  sources.forEach(function(source) {
-    const path = "HTML5";
-    const source_path = `${SUB_PATH}/${path}`;
-    let command = ``;
-    if (Shell.test("-e", source_path)) {
-      command = `cd ${source_path} 
-                 git pull ${source}`;
-      tip = "更新";
-    } else {
-      Shell.mkdir(source_path);
-      command = `
-        cd ${SUB_PATH}
-        git init
-        git clone ${source}
-      `;
-    }
-    if (Shell.exec(command).code !== 0) {
-      console.log(chalk.red(`Error: Something is Wrong With the ${source}`));
-      Shell.exit(1);
-    }
-  });
+  const command = `npm i ${sources.join(" ")} -D`;
+  if (Shell.exec(command).code !== 0) {
+    console.log(chalk.red(`Error: Something is Wrong With the ${source}`));
+    Shell.exit(1);
+  }
+
+  // sources.forEach(function(source) {
+  //   const path = "HTML5";
+  //   const source_path = `${SUB_PATH}/${path}`;
+  //   let command = ``;
+  //   if (Shell.test("-e", source_path)) {
+  //     command = `cd ${source_path}
+  //                git pull ${source}`;
+  //     tip = "更新";
+  //   } else {
+  //     Shell.mkdir(source_path);
+  //     command = `
+  //       cd ${SUB_PATH}
+  //       git init
+  //       git clone ${source}
+  //     `;
+  //   }
+  //   if (Shell.exec(command).code !== 0) {
+  //     console.log(chalk.red(`Error: Something is Wrong With the ${source}`));
+  //     Shell.exit(1);
+  //   }
+  // });
   console.log(chalk.green(`${tip}${needSourceList}成功`));
   Shell.exit(1);
 }
@@ -115,7 +121,7 @@ Commander.command("update")
       {
         type: "checkbox",
         name: "updateSourceList",
-        message: "请选择要整合的业务",
+        message: "请选择要更新的资源",
         choices: needSourceList,
       },
     ];

@@ -1,6 +1,7 @@
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const path = require("path");
 const webpackFileInject = require("./webpackFileInject");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const babelConfig = {
   cacheDirectory: true,
   presets: [
@@ -33,9 +34,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./packages/"),
     filename: "[name]/dist/app.js",
-    library: "Article111",
+    library: "Article",
     libraryTarget: "umd",
-    libraryExport: "default",
   },
   module: {
     rules: [
@@ -63,13 +63,53 @@ module.exports = {
         exclude: /pickr.*js/,
         options: babelConfig,
       },
+      {
+        test: /\.less$/,
+        use: [
+          { loader: "style-loader" },
+          {
+            loader: "css-loader",
+            options: { sourceMap: true },
+          },
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                modifyVars: {
+                  "primary-color": "#1DA57A",
+                },
+                sourceMap: true,
+                javascriptEnabled: true,
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: true,
+            },
+          },
+          "css-loader",
+        ],
+      },
     ],
   },
   resolve: {
     alias: {
-      "lerna-repo/util": path.join(__dirname, "./util"),
+      "@lerna-repo/util": path.join(__dirname, "./util"),
+      "@lerna-repo/style": path.join(__dirname, "./style"),
     },
     extensions: [".js", ".jsx", ".ts", ".tsx", ".vue", ".md"],
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
+    new VueLoaderPlugin(),
+  ],
 };

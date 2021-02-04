@@ -19,6 +19,7 @@
   },
   "gitHead": "232aba49c17f3000d24bf7174321fe0a809aa82c",
   "dependencies": {
-    "core": "../core"
+    "core": "../core",
+    "vue-router": "^3.5.1"
   }
 }
