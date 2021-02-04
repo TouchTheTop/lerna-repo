@@ -14,10 +14,10 @@
       "noUnusedParameters": true,
       "noUnusedLocals": true,
       "noImplicitAny": false,
-      "target": "es6",
+      "target": "es5",
       "lib": ["dom", "es2017"],
       "skipLibCheck": true,
       "allowJs": true
     },
-    "exclude": ["node_modules", "lib", "es", "dist","js","util"]
+    "exclude": ["node_modules", "lib", "es", "dist","**/*.js","util","**/*.spec.ts"]
   }

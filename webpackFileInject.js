@@ -6,7 +6,7 @@ const fileEntryPath = "/src/app.ts";
 // 打包出口
 const fileOutPath = "/dist";
 // 需要忽略的打包入口
-const ignorePaths = ["cli"];
+const ignorePaths = ["cli", "poster"];
 
 // 生成packages
 module.exports = function fileDisplay(filePath) {
