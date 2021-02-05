@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>-----【文章】-----</h1>
+    <h1>-----【文章111】-----</h1>
     <loading></loading>
     <button @click="toDetail">点击跳转详情</button>
   </div>
@@ -8,7 +8,7 @@
 <script>
 // 引入公共库中的组件
 import { Loading } from "qytbase-core";
-import Api from "../../api";
+import { pageAccount } from "../../api/account";
 export default {
   name: "QAvatar",
   props: {},
@@ -19,7 +19,8 @@ export default {
     return {};
   },
   mounted() {
-    Api.post();
+    console.log("testse");
+    pageAccount();
   },
   methods: {
     toDetail() {
