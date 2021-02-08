@@ -106,6 +106,7 @@ module.exports = {
     },
     extensions: [".js", ".jsx", ".ts", ".tsx", ".vue", ".md"],
   },
+  externals: ["qytbase.config.js", /^qytbase.config.js/],
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",

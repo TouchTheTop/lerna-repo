@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>-----【文章111】-----</h1>
+    <slot name="header">这里是待插入的插槽</slot>
+    <h1>-----【文章展示区域】-----</h1>
     <loading></loading>
     <button @click="toDetail">点击跳转详情</button>
   </div>
@@ -19,7 +20,6 @@ export default {
     return {};
   },
   mounted() {
-    console.log("testse");
     pageAccount();
   },
   methods: {

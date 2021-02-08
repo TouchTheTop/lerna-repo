@@ -1,5 +1,3 @@
-
-
 import axios from "axios";
 import qs from "query-string";
 import ExtendableError from "es6-error";
@@ -7,15 +5,11 @@ import ExtendableError from "es6-error";
 const { protocol } = window.location;
 const { CancelToken } = axios;
 const noop = () => {};
-declare global {
-  interface Window { $Api: GenRequest; }
-}
 export class APIError extends ExtendableError {
   constructor(message = "") {
     super(message);
   }
 }
-
 
 /**
  * 拦截器
@@ -24,9 +18,8 @@ export class APIError extends ExtendableError {
  * 401100: token过期
  */
 
-
 axios.interceptors.response.use(
-  (response: any) => {
+  (response) => {
     if (response.config.isDown) {
       const blob = new Blob([response.data], {
         type: response.headers["content-type"],
@@ -87,10 +80,9 @@ export const getAPIUrl = (prefix, endpoint) => {
   return url.replace(re, "/$1");
 };
 
-
 function request(host, endpoint, apiConfig = {}, reqConfig = {}) {
   const prefix = getAPIPrefix(host);
-  const config: any = {
+  const config = {
     ...apiConfig,
     ...reqConfig,
   };
@@ -110,7 +102,7 @@ function request(host, endpoint, apiConfig = {}, reqConfig = {}) {
   if (handleOption) {
     opts = handleOption(opts) || opts;
   }
-  const promise:any = axios(url, opts)
+  const promise = axios(url, opts)
     .then(checkStatus)
     .then((resp) => resp.data)
     .then(checkResp)
@@ -136,7 +128,7 @@ function request(host, endpoint, apiConfig = {}, reqConfig = {}) {
     // 如无配置，则启用默认弹框
     if (showNotification) {
       // TODO：请求失败弹框
-      showNotification()
+      showNotification();
     }
     throw new APIError(`[${resp.status}] 请求错误 ${resp.config.url}`);
   }
@@ -147,44 +139,43 @@ function request(host, endpoint, apiConfig = {}, reqConfig = {}) {
     }
     if (showNotification) {
       // TODO：请求失败弹框
-      showNotification()
+      showNotification();
     }
     throw new APIError(`[${data.code}] 请求失败 ${data.message}`);
   }
 }
 
-class GenRequest  {
-  static install: (Vue) => void
-  option: object
-  base: string
-  static option: any;
+class GenRequest {
   constructor(option) {
-    const { base,...configs } = option
-    this.option = configs
-    this.base = base
+    if (!option) {
+      return;
+    }
+    const { base = "", ...configs } = option;
+    this.option = configs;
+    this.base = base;
   }
   get(endpoint, data = {}, config) {
-    return request(this.base,endpoint, {
+    return request(this.base, endpoint, {
       ...this.option,
       ...config,
       method: "get",
-      params: data
+      params: data,
     });
   }
   post(endpoint, data = {}, config) {
-    return request(this.base,endpoint, {
+    return request(this.base, endpoint, {
       ...this.option,
       ...config,
       method: "post",
-      data
+      data,
     });
   }
   postForm(endpoint, data = {}, config) {
-    return request(this.base,endpoint, {
+    return request(this.base, endpoint, {
       ...this.option,
       ...config,
       method: "post",
-      data: data instanceof FormData ? data : qs.stringify(data)
+      data: data instanceof FormData ? data : qs.stringify(data),
     });
   }
   postFile(endpoint, files, config) {
@@ -197,10 +188,12 @@ class GenRequest  {
     });
     return this.postForm(endpoint, fd, config);
   }
-  install(App: any) { 
-    App.prototype.$loginInfo = this.option
-    window.$Api = this
+  install(App) {
+    App.prototype.$loginInfo = this.option;
+    const r = new GenRequest();
+    r.__proto__ = this;
+    window.$Api = r;
   }
 }
 
-export default GenRequest
+export default GenRequest;
