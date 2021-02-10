@@ -6,7 +6,7 @@
 <script>
 // 引入公共库中的组件
 export default {
-  name: "QAvatar-Add",
+  name: "QAvatar-Add11",
 
   props: {
     /**

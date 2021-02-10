@@ -2,7 +2,7 @@ const path = require("path");
 const glob = require("glob");
 const fs = require("fs");
 // 打包入口
-const fileEntryPath = "/src/app.ts";
+const fileEntryPath = "/src/app.js";
 // 打包出口
 const fileOutPath = "/dist";
 // 需要忽略的打包入口
