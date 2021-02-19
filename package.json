@@ -6,19 +6,28 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "styleguide": "vue-styleguidist server",
-    "styleguide:build": "vue-styleguidist build"
+    "doc": "vue-styleguidist server",
+    "doc:build": "vue-styleguidist build",
+    "router": "node packages/cli/bin.js"
   },
   "author": "christine316",
   "license": "ISC",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.11",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
-    "eslint": "^7.19.0",
+    "eslint": "^7.20.0",
+    "eslint-config-ali": "^12.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "^5.0.9",
     "lerna": "^3.22.1",
     "less": "^4.1.1",
     "less-loader": "^8.0.0",
+    "lint-staged": "^10.5.4",
     "mini-css-extract-plugin": "^1.3.5",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.14",
@@ -33,5 +42,18 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-typescript": "^7.12.7",
     "@vue/babel-plugin-jsx": "^1.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.{js,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix --ext .js",
+      "git add ."
+    ]
   }
 }

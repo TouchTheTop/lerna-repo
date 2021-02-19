@@ -2,7 +2,7 @@
   "name": "qytbase-cli",
   "version": "0.0.47",
   "description": "",
-  "main": "routerModule.js",
+  "main": "bin.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/TouchTheTop/lerna-repo.git",
