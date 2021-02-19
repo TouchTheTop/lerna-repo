@@ -1,7 +1,6 @@
 // component:入口组件 deps:依赖组件
 
 let a = 1;
-c;
 // export const withInstall = function(component, deps, routers) {
 //   const c = component;
 //   c.install = function(app) {
