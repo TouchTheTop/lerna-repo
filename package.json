@@ -45,17 +45,17 @@
     "@babel/preset-typescript": "^7.12.7",
     "@vue/babel-plugin-jsx": "^1.0.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E $GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "*.{js,ts,tsx}": [
       "prettier --write",
       "eslint --fix --ext .js",
       "git add ."
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E $GIT_PARAMS"
+    }
   }
 }
