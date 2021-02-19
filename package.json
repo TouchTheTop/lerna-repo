@@ -25,6 +25,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-vue": "^7.6.0",
     "husky": "^5.0.9",
     "lerna": "^3.22.1",
     "less": "^4.1.1",
@@ -52,11 +53,5 @@
       "eslint --fix --ext .js",
       "git add ."
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
