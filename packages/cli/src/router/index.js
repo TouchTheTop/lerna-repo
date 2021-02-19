@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import { Article } from "qytbase-article";
+
 Vue.use(VueRouter);
 
 const routes = [

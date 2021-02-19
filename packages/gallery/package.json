@@ -1,0 +1,25 @@
+{
+  "name": "qytbase-gallery",
+  "version": "0.0.47",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "christine316",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TouchTheTop/lerna-repo.git",
+    "directory": "packages/article"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "1525335cd736e6503bb248b6695f035b7c55db64",
+  "dependencies": {
+    "qytbase-core": "^0.0.47",
+    "vue-router": "^3.5.1"
+  }
+}

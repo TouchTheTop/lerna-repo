@@ -1,5 +1,6 @@
 import Index from "../Index/Index.vue";
 import Detail from "../components/Detail.vue";
+
 const routes = [
   {
     path: "/article",
