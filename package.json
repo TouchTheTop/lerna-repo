@@ -8,7 +8,9 @@
     "build": "webpack",
     "doc": "vue-styleguidist server",
     "doc:build": "vue-styleguidist build",
-    "router": "node packages/cli/bin.js"
+    "router": "node packages/cli/bin.js",
+    "lint": "eslint . --ext .js,.ts --ignore-path .gitignore",
+    "fix": "npm run lint -- --fix"
   },
   "author": "christine316",
   "license": "ISC",
